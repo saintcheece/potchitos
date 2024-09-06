@@ -5,6 +5,8 @@ const bodyParser = require('body-parser'); //input reader
 
 const site = express();
 
+site.use(bodyParser.urlencoded({extended: false}));
+
 site.set('view engine', 'ejs'); //set ejs
 site.set('views', 'views'); //set views folder
 
@@ -19,7 +21,7 @@ const home = require('./routes/home');
 //ROUTE HANDLING
 ////route to logPage (takes first parameter(link) then sends the second(route))
 ////default page must be at the end
-site.use('/log', log);
+site.use(log.routes); //remember to add .routes
 site.use(home);
 
 //404 PAGE
