@@ -7,9 +7,9 @@ const inptLog = require('./log');
 const router = express.Router();
 
 router.get('/home', (req, res)=>{
-    console.log(inptLog.email);
-    console.log(inptLog.pass);
-    res.render('home');
+    res.render('home', {
+        username: inptLog.email
+    });
 });
 
 module.exports = router;
