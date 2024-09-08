@@ -8,10 +8,9 @@
         <input type="text" id="inptPass" name="inptPass" placeholder="password">
         <button type="submit">Log In</button>
     </form>
-    <div>
-        <% if(isInvalid == true){ %>
-            <p color="red">Invalid Email or Password</p>
-        <% } %>
-    </div>
+    <!-- display flash message if exists -->
+    <% if (info) { %>
+        <p class="alert alert-danger"><%= info %></p>
+    <% } %>
 </body>
 </html>

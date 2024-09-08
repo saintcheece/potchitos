@@ -1,17 +1,12 @@
 const express = require('express');
 const path = require('path');
-const flash = require('express-flash')
 const rootDir = require('../util/path');
 
 const router = express.Router();
 
-let isInvalid = false;
-
-router.use(flash());
-
 //ACTIVATES ON-LOAD
 router.get('/log', (req, res) => {
-    res.render('log', {isInvalid: isInvalid});
+    res.render('log');
 });
 
 //ACTIVATES ON REQUEST (SUBMIT)
@@ -22,9 +17,9 @@ router.post('/log', (req, res) => {
         exports.pass = req.body.inptPass;
         res.redirect('/');
     }else{
-        isInvalid = true;
-        req.flash('error', 'Invalid Email or Password');
-        res.redirect('/log');
+        // create a session to flash a message back to log in
+        req.flash('log_response', 'Invalid Email or Password');
+        res.render('log', { info: req.flash('log_response') });
     }
 });
 
