@@ -1,14 +1,14 @@
 const express = require('express');
 const flash = require('express-flash');
 
-const sess = require('./session');
+const session = require('./session');
 
 const path = require('path'); //path reader
 const bodyParser = require('body-parser'); //input reader
 
 const site = express();
 
-site.use(sess);
+site.use(session);
 site.use(flash());
 site.use(bodyParser.urlencoded({extended: false}));
 

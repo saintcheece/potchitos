@@ -15,4 +15,10 @@ const sessionConfig = {
 
 const sessionMiddleware = session(sessionConfig);
 
+//To assign a value to it:
+// req.session.user = {email: 'email@example.com', username: 'username'};
+
+//To read from it:
+// const user = req.session.user;
+
 module.exports = sessionMiddleware;
