@@ -1,4 +1,4 @@
-<%- include('layout/head.ejs') %>
+<!-- <%- include('layout/head.ejs') %>
     <title>Document</title>
 </head>
 <body>
@@ -7,10 +7,39 @@
         <input type="text" id="inptEmail" name="inptEmail" placeholder="email">
         <input type="text" id="inptPass" name="inptPass" placeholder="password">
         <button type="submit">Log In</button>
-    </form>
+    </form> -->
     <!-- display flash message if exists -->
-    <% if (info) { %>
+    <!-- <% if (info) { %>
         <p class="alert alert-danger"><%= info %></p>
     <% } %>
 </body>
+</html> -->
+
+<%- include('layout/head.ejs') %>
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Login</title>
+</head>
+
+<body>
+<div id="header-placeholder"></div>
+<section id="login-section">
+
+    <form action="" method="">
+        <h1>Login</h1>
+        <p>Please input your correct credentials to login.</p>
+        <label for="email-address">Email Address:</label>
+        <input type="text" placeholder="Username" required id="email-address" name="email-address" >
+        <label for="password">Password:</label>
+        
+        <input type="password" placeholder="Password"  id="password" name="password">
+        <button type="submit">Login</button>
+        <div class="quote-container">
+        <p id="register-quote">Don't have an account? <a href="">Sign up instead!</a> </p>
+    </div>
+    </form>
+</section>
+<div id="footer-placeholder"></div>
+</body>
+<!-- <script src="JS/header_loader.js"></script>
+<script src="JS/footer_loader.js"></script> -->
 </html>

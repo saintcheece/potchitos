@@ -1,0 +1,77 @@
+<%- include('layout/head.ejs') %>
+    <link rel="stylesheet" href="/css/cart.css">
+    <title>Cart</title>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <section id="cart-section">
+        <div class="cart-content">
+            <div class="cart-items">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Thumbnail</th>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><button class="remove-item">×</button></td>
+                            <td><img src="/assets/images/cake-thumbnail.jpg" alt="Cake Image" class="item-image"></td>
+                            <td>Chocolate Cake</td>
+                            <td>₱280</td>
+                            <td><input type="number" value="1" min="1" class="quantity-input"></td>
+                            <td>₱280</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="update-cart">Update Cart</button>
+            </div>
+
+            <div class="price-breakdown">
+                <div class="price-summary">
+                    <p class="summary-label">Subtotal:</p>
+                    <p class="summary-amount">₱280</p>
+                </div>
+                <div class="shipping-options">
+                    <p>Shipping Options</p>
+                    <form>
+                        <div class="shipping-option">
+                            <input type="radio" id="san-rafael" name="shipping" value="70">
+                            <label for="san-rafael">San Rafael, Bulacan: ₱70</label>
+                        </div>
+                        <div class="shipping-option">
+                            <input type="radio" id="san-ildefonso" name="shipping" value="50">
+                            <label for="san-ildefonso">San Ildefonso, Bulacan: ₱50</label>
+                        </div>
+                        <div class="shipping-option">
+                            <input type="radio" id="san-miguel" name="shipping" value="80">
+                            <label for="san-miguel">San Miguel, Bulacan: ₱80</label>
+                        </div>
+                        <div class="shipping-option">
+                            <input type="radio" id="pick-up" name="pick-up" value="80">
+                            <label for="san-miguel">Pick Up</label>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="total-amount">
+                    <hr>
+                    <p>Total:</p>
+                    <p class="total-price">₱370</p>
+                </div>
+                <button class="checkout-button">Proceed to Checkout</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+</body>
+<script src="JS/header_loader.js"></script>
+<script src="JS/footer_loader.js"></script>
+</html>
