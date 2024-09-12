@@ -3,7 +3,7 @@
     <title>Products</title>
 </head>
 <body>
-    <div id="header-placeholder"></div>
+    <%- include('layout/header.ejs') %>
     <section id="products" class="products-container">
         <div class="sidebar">
             <div class="side-bar-title">
@@ -123,9 +123,6 @@
             </div>
         </div>
     </section>
-    <div id="footer-placeholder"></div>
-
-    <script src="JS/header_loader.js"></script>
-    <script src="JS/footer_loader.js"></script>
+    <%- include('layout/footer.ejs') %>
 </body>
 </html>
